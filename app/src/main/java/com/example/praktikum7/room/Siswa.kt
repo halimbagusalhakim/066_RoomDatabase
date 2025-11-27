@@ -1,6 +1,10 @@
 package com.example.praktikum7.room
 
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 @Entity(tableName = "tblSiswa")
-data class Siswa()
+data class Siswa(
+    @PrimaryKey(autoGenerate = true)
+    val id: int = 0
+)
