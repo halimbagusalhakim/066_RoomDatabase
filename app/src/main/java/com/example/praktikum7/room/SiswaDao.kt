@@ -1,13 +1,16 @@
-package com.example.praktikum7.room;
+package com.example.praktikum7.room
 
-import androidx.room.Dao;
-import androidx.room.Query;
-
-import java.util.List;
-import java.util.concurrent.Flow;
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface SiswaDao {
-    @Query("SELECT * FROM tblSiswa ORDER BY nama ASC")
+    @Query("SELECT * from tblSiswa ORDER BY nama ASC")
     fun getAllSiswa(): Flow<List<Siswa>>
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insert(siswa: Siswa)
 }
