@@ -7,6 +7,7 @@ import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.praktikum7.repositori.AplikasiSiswa
 import com.example.praktikum7.viewmodel.DetailViewModel
+import com.example.praktikum7.viewmodel.EditViewModel
 import com.example.praktikum7.viewmodel.EntryViewModel
 import com.example.praktikum7.viewmodel.HomeViewModel
 

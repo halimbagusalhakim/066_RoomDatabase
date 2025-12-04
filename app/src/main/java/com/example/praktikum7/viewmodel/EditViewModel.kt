@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.praktikum7.repositori.RepositoriSiswa
 import com.example.praktikum7.view.route.DestinasiDetailSiswa
+
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
@@ -21,6 +22,7 @@ class EditViewModel(
         private set
 
     private val idSiswa: Int = checkNotNull(savedStateHandle[DestinasiDetailSiswa.itemIdArg])
+
     init {
         viewModelScope.launch {
             uiStateSiswa = repositoriSiswa.getSiswaStream(idSiswa)
